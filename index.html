@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gincana TAD</title>
+   <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  
+</head>
+<body>
+
+
+
+<center>
+<h1>GINCANA TAD - 8 Anos!</h1>
+</center>
+
+
+<div id='puzzle'></div>
+<div id='words'></div>
+
+<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+<script type="text/javascript" src="src/wordfind.js"></script> 
+<script type="text/javascript" src="scripts/wordfindgame.js"></script> 
+<script>
+
+  var words = ['GINCANA', 'AFTER', 'DARK', 'CAPA', 'LIVROS', 'FERIAS', 'MUSICA',
+				'FILME', 'EPISODIO', 'AUTOR', 'ROCKER', 'MOTOQUEIRO', 'MAFIA',
+				'BRUXAS', 'LOBO', 'WOLFGARD', 'SANGUINATI', 'VAMPIROS', 'FADAS',
+				'COMUNIDADE', 'GUILDA', 'LEGADO', 'SCHOOL', 'FIRE', 'MYSTIC',
+				'PASSATEMPO', 'RESENHA', 'SURPRESA', 'SINOPSE', 'ABERTURA', 
+				'MOONBOUND', 'PSY', 'LARISSA', 'FALLEN', 'TIJAN', 'LEITURA', 'CREST', 'ESPECIAL',
+               'ANIVERSARIO', 'FAERIE', 'QUOTES', 'HIGH', 'FEITIÇO', 'CHOCOLATE', 'QUEBRA',
+			   'FACIL', 'COMPETIDORES', 'PROFETISAS', 'SANGUE', 'STYLUS', 'TRABALHO',
+               'MEMBROS', 'SORTEIO', 'BONUS', 'TEMPO', 'TRADUTOR',
+               'ARCANA','CHANGELING','HARMONY','AVALON','DEMONICA',
+               'DELIVERANCE','UNTIL','CAPITULOS','VOLUMES','SERIES','UNICO', 'JOGOS',
+               'DISTOPIA', 'PONTOS', 'IONE', 'MARCADORES', 'PALAVRAS',
+               'PAGINAS', 'LETRAS', 'PARAGRAFOS', 'HORAS',
+               'MINUTOS'];
+
+  // start a word find game
+  var gamePuzzle = wordfindgame.create(words, '#puzzle', '#words');
+
+  $('#solve').click( function() {
+    wordfindgame.solve(gamePuzzle, words);
+  });
+
+  // create just a puzzle, without filling in the blanks and print to console
+  var puzzle = wordfind.newPuzzle(
+    words, 
+    {height: 18, width:18, fillBlanks: false}
+  );
+  wordfind.print(puzzle);
+
+</script>
+</body>
+</html>
