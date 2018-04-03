@@ -47,7 +47,7 @@ button::-moz-focus-inner {
 /* indicates that the square is part of a word that has been found */ 
 #puzzle .found {
   background-color: #dddaf2;
-  color: white;
+  
 }
 
 #puzzle .solved {
